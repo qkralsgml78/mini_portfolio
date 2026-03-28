@@ -1,0 +1,22 @@
+/* 네온 그리드 배경 및 블러 효과 */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: radial-gradient(ellipse 60% 40% at 70% 60%, rgba(186, 85, 211, 0.25), transparent 80%),
+              radial-gradient(ellipse 40% 30% at 30% 30%, rgba(100, 255, 218, 0.18), transparent 80%),
+              #0a0a13;
+  pointer-events: none;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: 1;
+  pointer-events: none;
+}
